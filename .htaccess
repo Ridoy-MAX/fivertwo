@@ -1,0 +1,26 @@
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
+Header always set Content-Security-Policy "upgrade-insecure-requests;"
+ErrorDocument 404 /error404.html
+
+RewriteRule ^index.html$ / [R=301,L]
+RewriteRule ^(.*)/index.html$ /$1/ [R=301,L]
+
+<ifModule mod_expires.c>
+ExpiresActive On
+ExpiresDefault A31536000
+
+# Expires after 1 year
+ExpiresByType image/gif A31536000
+ExpiresByType image/png A31536000
+ExpiresByType image/jpg A31536000
+ExpiresByType image/webp A31536000
+ExpiresByType image/x-icon A31536000
+ExpiresByType application/pdf A31536000
+ExpiresByType application/x-javascript A31536000
+ExpiresByType text/plain A31536000
+
+# Expires after 1 day
+ExpiresByType text/css A31536000
+</ifModule>

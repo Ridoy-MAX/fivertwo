@@ -1,0 +1,1251 @@
+
+/* ========== Universal Code Start ============= */
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+ul, ol {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+html, body {
+    scroll-behavior: unset !important;
+}
+
+.nav-link:focus {
+    color: var(--orange);
+}
+
+.z-index {
+    z-index: 10;
+}
+
+/* ========== Universal Code End ================*/
+/* ========== Back to top CSS start ================*/
+
+.back_to_top {
+    position: fixed;
+    right: 28px;
+    bottom: -50px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    z-index: 50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.3);
+    transition: 1s cubic-bezier(1, .18, .29, 1.16) bottom;
+    -webkit-transition: 1s cubic-bezier(1, .18, .29, 1.16) bottom;
+    -moz-transition: 1s cubic-bezier(1, .18, .29, 1.16) bottom;
+    -ms-transition: 1s cubic-bezier(1, .18, .29, 1.16) bottom;
+    -o-transition: 1s cubic-bezier(1, .18, .29, 1.16) bottom;
+}
+
+.back_to_top:hover {
+    background: var(--aquamarine);
+}
+
+.back_to_top i {
+    font-size: 25px;
+    color: var(--color1);
+}
+
+.bttop-show {
+    bottom: 60px;
+}
+
+/* ========== Back to top CSS end ================*/
+/* ========== Website Settings Control ================*/
+
+:root {
+    --color1: #FFFFFF;
+    --color2: #000000;
+    --aquamarine: #66c4c4;
+    --orange:#deb53b;
+    --dimgray:#333333;
+    --lightgray: #f3f3f3;
+    --midgray: #ddd;
+
+    --primeryfont: 'Montserrat', sans-serif;
+
+}
+
+@font-face {
+    font-family: "quentin";
+    src: url("http://fonts.cdnfonts.com/css/quentin");
+    font-display: swap;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    color: var(--dimgray);
+}
+
+/* ========== Website Settings Control ================*/
+/* =========== Navigation CSS start ================*/
+
+nav .nav-item {
+    margin: 0 20px;
+}
+
+nav .callnow {
+    background: var(--aquamarine);
+    color: var(--color1) !important;
+    padding-top: 13px !important;
+    padding-bottom: 13px !important;
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+
+}
+
+.second_logo {
+    transform: scale(1.3) ;
+    -webkit-transform: scale(1.3) ;
+    -moz-transform: scale(1.3) ;
+    -ms-transform: scale(1.3) ;
+    -o-transform: scale(1.3) ;
+}
+
+nav .callnow:hover {
+    background: var(--orange);
+}
+
+.nav_toggler {
+    display: none;
+}
+
+nav.navbar {
+    padding: 50px 0;
+    position: absolute;
+    z-index: 11;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+nav .nav-item a, nav .nav-item button, .nav-item svg {
+    font: 600 16px/16px var(--primeryfont);
+    color: var(--aquamarine);
+    letter-spacing: 1.8px;
+    fill: var(--aquamarine);
+}
+
+nav .nav-item a:hover {
+    color: var(--color2);
+}
+
+.nav-item button:hover {
+    color: var(--color2);
+}
+
+.nav-item button:hover svg {
+    fill: var(--color2);
+}
+
+nav .nav-item button {
+    background: none;
+    border: none;
+
+}
+
+.second_logo {
+    position: absolute;
+    width: 90px;
+    left: -40px;
+    top: -50%;
+}
+
+.side_nav {
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    background: url(../images/menu.webp) no-repeat center/cover var(--aquamarine);
+    z-index: 30;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+
+.side_nav.nav_move {
+    right: 0px;
+}
+
+.side_nav_wrap {
+    padding-top: 10px;
+    padding-left: 10px;
+    overflow-y: auto;
+    height: 100%;
+}
+
+.side_nav_wrap button {
+    background: none;
+    border: none;
+    font-size: 25px;
+}
+
+.side_nav_item li {
+    margin-bottom: 35px;
+}
+
+.side_nav_item li a {
+    font: 600 16px/16px var(--primeryfont);
+    color: var(--color1);
+    letter-spacing: 1.8px;
+}
+
+.side_nav_item li a:hover {
+    color: var(--color2);
+}
+
+.callnow {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.callnow a {
+    display: inline-block;
+    background: var(--aquamarine);
+    color: var(--color1);
+    font: 500 18px/18px var(--primeryfont);
+    letter-spacing: 1.8px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+/* =========== Navigation CSS end ================*/
+/* =========== Header CSS start ================*/
+
+#banner {
+    background: url('../images/banner.webp') center/cover no-repeat var(--color1);
+    padding-top: 150px;
+    padding-bottom: 100px;
+    clip-path: polygon(0% 0%, 100% 0, 100% 90%, 62% 100%, 0 94%);
+}
+
+#banner .header {
+    font-family: 'quentin', sans-serif;
+    font-size: 65px;
+    margin-top: 100px;
+}
+
+.color-text {
+    color: var(--aquamarine);
+}
+
+#banner p {
+    font: 400 24px/35px var(--primeryfont);
+    letter-spacing: 1.8px;
+    color: var(--dimgray);
+    margin-left: 40px;
+}
+
+#banner p span {
+    font-weight: 600;
+}
+
+.divider {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#banner .arrow a {
+    font-size: 40px;
+    line-height: 0;
+    color: var(--orange);
+}
+
+/* =========== Header CSS end ================*/
+/* =========== relationships CSS star ================*/
+
+#relationships {
+    padding-top: 120px;
+    padding-bottom: 80px;
+    background: var(--color1);
+}
+
+.image_wrap {
+    width: 300px;
+    padding-left: .3px;
+    padding-top: .3px;
+}
+
+#relationships .header {
+    font-family: 'quentin';
+    font-size: 60px;
+}
+
+#relationships .subheader {
+    font: 400 25px/30px var(--primeryfont);
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    padding-left: 30px;
+    padding-bottom: 20px;
+}
+
+#relationships p {
+    padding-left: 45px;
+    font: 400 16px/28px var(--primeryfont);
+}
+
+#relationships p span {
+    font-weight: 600;
+}
+
+/* =========== relationships CSS end ================*/
+/* =========== Who am I CSS start ================*/
+
+#who {
+    background: var(--lightgray);
+}
+
+#who .bg_image {
+    background: url(../images/image_2.webp) no-repeat center/cover;
+} 
+
+#who .content_wrap{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#who p {
+    margin-bottom: 5px !important;
+}
+
+p {
+    font: 400 15px/27px var(--primeryfont);
+    color: var(--dimgray);
+}
+
+#who .smallheader {
+    font: 600 italic 16px/28px var(--primeryfont);
+    color: var(--aquamarine);
+}
+
+#who .subheader {
+    font: 600 25px/25px var(--primeryfont);
+    letter-spacing: 1.8px;
+}
+
+#who .firs_col {
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+/* =========== Who am I CSS end ================*/
+/* =========== Good Relation CSS start ================*/
+
+#good_relation {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+#good_relation .subheader {
+    font: 600 25px/25px var(--primeryfont);
+    letter-spacing: 1.8px;
+}
+
+/* =========== Good Relation CSS end ================*/
+/* =========== Simple Skill CSS start ================*/
+
+#simple_skill {
+    background: var(--lightgray);
+}
+
+#simple_skill .image_bg {
+    background: url(../images/image_4.webp) no-repeat center/cover;
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+#simple_skill p span {
+    font-weight: 600;
+}
+
+#simple_skill .subheader {
+    font: 600 18px/22px var(--primeryfont);
+    letter-spacing: 1.8px;
+}
+
+/* =========== Simple Skill CSS end ================*/
+/* =========== Testimonial CSS start ================*/
+
+#testimonial {
+    margin-top: 120px;
+    margin-bottom: 100px;
+}
+
+#testimonial p {
+    margin-bottom: 0 !important;
+}
+
+#testimonial .name {
+    font: 600 17px/17px var(--primeryfont);
+    text-align: right;
+    margin-bottom: 0 !important;
+    margin-top: 5px;
+}
+
+.testimonial_main .testimonial_item {
+    padding-bottom: 50px;
+}
+
+.image_wrap_2 {
+    width: 200px;
+    padding: 10px 0 0 30px;
+}
+
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0 !important;
+    padding-left: 0 !important;
+}
+
+.slick-dots li {
+    height: 10px !important;
+    overflow: hidden;
+}
+
+.slick-dots button {
+    color: rgba(0,0,0,0);
+    border: none;
+    background: var(--aquamarine);
+    opacity: .4;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.slick-dots .slick-active button {
+    opacity: 1;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+
+/* =========== Testimonial CSS end ================*/
+/* =========== How can I Help CSS start ================*/
+
+.gold_trim {
+    background: url(../images/gold-trim.webp) no-repeat top/100%;
+    width: 100%;
+    padding-top: 7px ;
+}
+
+#help {
+    background: url(../images/2nd_top_bg.webp) no-repeat top/cover;
+    padding-top: 60px;
+}
+
+#help h2 {
+    font-family: 'quentin';
+    font-size: 50px;
+}
+
+.help_main {
+    position: relative;
+    padding-bottom: 100px;
+}
+
+.help_main_wrap {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.help_item_wrap {
+    position: relative;
+    background: var(--aquamarine);
+}
+
+.help_item_wrap a {
+    position: absolute;
+    bottom: 18%;
+    left: 50%;
+    font: 500 20px/25px var(--primeryfont);
+    color: var(--color2);
+    letter-spacing: 1.8px;
+    transition: .4s;
+    transform: scale(1) translateX(-50%);
+    -webkit-transform: scale(1) translateX(-50%);
+    -moz-transform: scale(1) translateX(-50%);
+    -ms-transform: scale(1) translateX(-50%);
+    -o-transform: scale(1) translateX(-50%);
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+}
+
+.help_item_wrap a.big-text {
+    bottom: 10%;
+}
+
+.help_item_wrap a:hover {
+    transform: scale(1.1) translateX(-50%);
+    -webkit-transform: scale(1.1) translateX(-50%);
+    -moz-transform: scale(1.1) translateX(-50%);
+    -ms-transform: scale(1.1) translateX(-50%);
+    -o-transform: scale(1.1) translateX(-50%);
+}
+
+/* =========== How can I Help CSS end ================*/
+/* =========== Masterclass CSS start ================*/
+
+#masterclass {
+    background: var(--aquamarine) url(../images/masterclass_bg.webp) no-repeat top left/cover;
+    margin-top: 270px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#masterclass .header {
+    font-family: 'quentin';
+    text-align: center;
+    font-size: 60px;
+    color: var(--color1);
+}
+
+#masterclass .subheader {
+    font: 600 28px/28px var(--primeryfont);
+    text-align: center;
+    color: var(--color1);
+    letter-spacing: 1.8px;
+}
+
+#masterclass p {
+    color: var(--color1);
+    line-height: 20px;
+    font-weight: 500;
+}
+
+#masterclass .access_btn button {
+    padding: 15px 30px;
+    background: var(--orange);
+    color: var(--color1);
+    font: 600 20px/20px var(--primeryfont);
+    letter-spacing: 1.5px;
+    border: none;
+    transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+}
+
+#masterclass .access_btn button:hover {
+    background: var(--aquamarine);
+}
+
+#masterclass .modal-content button {
+    font-size: 23px;
+    border: none;
+    background: none;
+    color: var(--aquamarine);
+}
+
+#masterclass .modal-content p {
+    text-align: center;
+}
+
+#masterclass .modal-content {
+    border-radius: 0 !important;
+    border: 2px solid var(--orange);
+    background: url(../images/flower.webp) no-repeat top left/20% var(--color1);
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    -ms-border-radius: 0 !important;
+    -o-border-radius: 0 !important;
+}
+
+@media (min-width: 768px) {
+.modal-dialog {
+    max-width: 700px;
+    margin: 1.75rem auto;
+    }
+}
+
+@media (min-width: 992px) {
+.modal-dialog {
+    max-width: 900px;
+    margin: 1.75rem auto;
+    }
+}
+
+#masterclass .modal-body {
+    padding-top: 0 !important;
+    padding-bottom: 40px !important;
+}
+
+#masterclass .modal-body .header {
+    color: var(--aquamarine) !important;
+    font-size: 40px;
+}
+
+#masterclass .modal-body .subheader {
+    color: var(--aquamarine) !important;
+    font-size: 25px;
+    line-height: 25px;
+}
+
+#masterclass .contact-head {
+    font: 600 20px/20px var(--primeryfont);
+    text-align: center;
+}
+
+#masterclass .modal-body p {
+    color: var(--dimgray);
+    font-style: italic;
+    font-weight: 400;
+}
+
+#masterclass .modal-body input, #masterclass .modal-body textarea {
+    border-radius: 0;
+    border: 1px solid var(--midgray);
+    padding: 10px 15px;
+    font: 400 16px/16px var(--primeryfont);
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+
+#masterclass .modal-body textarea {
+    height: 150px;
+    resize: none;
+}
+
+#masterclass .submit_btn button {
+    background: var(--orange);
+    color: var(--color1);
+    border: none;
+    text-align: center;
+    width: 100%;
+    font: 600 16px/16px var(--primeryfont);
+    padding: 13px 30px;
+}
+
+#masterclass .submit_btn button:hover {
+    background: var(--aquamarine);
+}
+
+/* =========== Masterclass CSS end ================*/
+/* =========== Footer CSS start ================*/
+
+#footer {
+    background: url(../images/footer_bg.png) no-repeat top/100%;
+    padding-top: 50px;
+}
+
+.footer_header {
+    font: 600 20px/20px var(--primeryfont);
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+
+.footer_logo a {
+    margin-top: -13px;
+}
+
+#footer ul li {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font: 600 15px/15px var(--primeryfont);
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+}
+
+#footer li a {
+    color: var(--aquamarine);
+}
+
+#footer li a:hover {
+    color: var(--color2);
+}
+
+#footer .contact_icon {
+    font-size: 20px;
+    padding-right: 15px;
+}
+
+#footer .contact_info {
+    font: 400 16px/20px var(--primeryfont);
+    color: var(--color2);
+
+}
+
+#footer .social_wrap {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 15px;
+}
+
+#footer .social_wrap a {
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    background: var(--aquamarine);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+}
+
+#footer .social_wrap a:hover {
+    background: var(--orange);
+}
+
+#footer .statement p {
+    line-height: 20px;
+}
+
+#footer .directory {
+    margin-top: 40px;
+}
+
+#footer .directory ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+#footer .directory li {
+    list-style-type: square;
+}
+
+#footer .directory li a {
+    text-align: center;
+}
+
+#footer .directory li a {
+    font: 400 15px/20px var(--primeryfont);
+    text-transform: capitalize;
+    color: var(--color2);
+}
+
+#footer .copyright {
+    background: var(--aquamarine);
+    font: 400 15px/15px var(--primeryfont);
+    color: var(--color1);
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#footer .copyright a {
+    color: var(--color1);
+}
+
+.news_letter {
+    overflow-x: hidden; 
+    width: 100%;
+    margin-top: -20px;
+}
+
+.substack_form {
+    background: none;
+    margin-left: -30px;
+    margin-top: -30px;
+}
+
+/* =========== Footer CSS end ================*/
+/* =========== Thank you page css ================*/
+
+#thank_you nav.navbar {
+    position: static;
+}
+
+#thank_you_note .header {
+    font: 600 40px/50px var(--primeryfont);
+    text-transform: uppercase;
+}
+
+/* =========== Thank you page css ================*/
+
+/* =========== About page css start ====================*/
+
+
+#about_page #banner .header {
+    padding-top: 80px;
+}
+
+#about_page #relationships .subheader {
+    font-size: 20px;
+    line-height: 30px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+}
+
+#about_page #relationships .header {
+    font-size: 50px;
+}
+
+#about_page #relationships p {
+    padding-left: 0;
+    margin-bottom: 5px;
+}
+
+#about_page #relationships p span {
+    font-weight: 400;
+}
+
+#about_page #relationships p.strong_line {
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 1.8px;
+}
+
+#about_page #relationships p.strong_line span {
+    font-weight: 600;
+    color: var(--aquamarine);
+}
+
+#about_page #the_truth {
+    background: var(--lightgray);
+    padding: 60px 0;
+    margin-top: 70px;
+}
+
+#about_page #the_truth .header {
+    font-family: 'quentin';
+    font-size: 50px;
+    color: var(--aquamarine);
+}
+
+#about_page #the_truth p {
+    padding-left: 50px;
+}
+
+#about_page #the_truth p span {
+    font-weight: 600;
+}
+
+#about_page #who {
+    margin-top: 0;
+}
+
+#about_page #who .header {
+    font-size: 55px;
+    font-family: 'quentin';
+}
+
+#about_page #who .wrap {
+    padding-left: 60px;
+}
+
+#about_page #who .subheader {
+    font: 500 20px/28px var(--primeryfont);
+    text-transform: uppercase;
+    padding-left: 40px;
+}
+
+#about_page #who p span {
+    font-weight: 600;
+}
+
+#about_page #good_relation .subheader {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+#about_page #good_relation .subheader span {
+    font-family: 'quentin';
+    color: var(--aquamarine);
+    font-size: 60px;
+    line-height: 60px;
+    padding-left: 40px;
+}
+
+.text_bold {
+    font-weight: 600 !important;
+}
+
+#about_page .bg_image_who_first {
+    background: url(../images/ami.webp) no-repeat top center/cover;
+}
+
+#about_page .bullet_bg {
+    background: url(../images/list_bg.webp) no-repeat right/cover;
+}
+
+#about_page .much_love {
+    background: url(../images/much_love.webp) no-repeat center/cover;
+}
+
+#funfact {
+    margin-top: 250px;
+}
+
+#funfact .header {
+    font-family: 'quentin';
+    font-size: 50px;
+    line-height: 50px;
+}
+
+.header_bulet {
+    width: 22px;
+    height: auto;
+}
+
+.skill_bulet {
+    width: 10px;
+    height: auto;
+}
+
+
+/* =========== About page css end ====================*/
+
+/* =========== Error page Css start ==================*/
+
+#error_section {
+    margin-top: 200px;
+}
+
+#error_section .error_name {
+    font: 700 25vw/25vw var(--primeryfont);
+    text-align: center;
+    color: var(--aquamarine);
+}
+
+#error_section .subheader {
+    text-align: center;
+    font: 700 30px/30px var(--primeryfont);
+    margin-bottom: 10px;
+}
+
+#error_section p {
+    text-align: center;
+    font: 400 18px/25px var(--primeryfont);
+}
+
+#error_section .home_page a {
+    text-align: center;
+    padding: 15px 35px;
+    color: var(--color1);
+    background: var(--aquamarine);
+    text-transform: uppercase;
+    font: 600 20px/20px var(--primeryfont);
+    display: inline-block;
+}
+
+#error_section .home_page a:hover {
+    background: var(--orange);
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+
+#error_section .home_page {
+    text-align: center;
+    margin-bottom: 200px;
+    margin-top: 50px;
+}
+
+/* =========== Error page Css end ==================*/
+/* =========== Case Studies page Css start ==================*/
+
+#case_studies_page #case_studies {
+    margin-top: 150px;
+    padding-bottom: 100px;
+}
+
+#case_studies_page #case_studies .header {
+    font-family: 'quentin';
+    font-size: 50px;
+}
+
+#case_studies_page #case_studies .subheader {
+    font: 600 30px/40px var(--primeryfont);
+    margin-bottom: 30px;
+}
+
+#case_studies_page #case_studies .item_name {
+    font: 500 20px/20px var(--primeryfont);
+    margin-top: 40px;
+}
+
+/* =========== Case Studies page Css end ==================*/
+/* =========== Advice page Css start ==================*/
+
+#advice_page #advice {
+    margin-top: 150px;
+    padding-bottom: 100px;
+}
+
+#advice_page #advice .header {
+    font-family: 'quentin';
+    font-size: 50px;
+}
+
+#advice_page #advice .header_2 {
+    font: 500 28px/35px var(--primeryfont);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#advice_page #advice .header_3 {
+    font: 500 20px/25px var(--primeryfont);
+    text-align: center;
+}
+
+#advice_page #advice .subheader {
+    font: 600 30px/40px var(--primeryfont);
+    margin-bottom: 15px;
+}
+
+#advice_page #advice .item_name {
+    font: 500 20px/20px var(--primeryfont);
+    margin-top: 40px;
+}
+
+/* =========== Advice page Css end ==================*/
+/* =========== Dating site scam page Css start ==================*/
+
+#datingsitescam_page #datingsitescam {
+    margin-top: 150px;
+    padding-bottom: 100px;
+}
+
+#datingsitescam_page #datingsitescam .header {
+    font-family: 'quentin';
+    font-size: 50px;
+}
+
+#datingsitescam_page #datingsitescam .header_2 {
+    font: 500 28px/35px var(--primeryfont);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#datingsitescam_page #datingsitescam .subheader {
+    font: 600 30px/40px var(--primeryfont);
+    margin-bottom: 15px;
+}
+
+#datingsitescam_page #datingsitescam .scam_line {
+    font: 700 30px/40px var(--primeryfont);
+}
+
+#datingsitescam_page #datingsitescam .italic {
+    font-style: italic;
+}
+
+#datingsitescam_page .hover:hover {
+    color: var(--orange);
+}
+
+/* =========== Dating site scam page Css end ==================*/
+/* =========== Glossary page Css start ==================*/
+
+#glossary_page #glossary {
+    margin-top: 150px;
+    padding-bottom: 100px;
+}
+
+#glossary_page #glossary .header {
+    font-family: 'quentin';
+    font-size: 50px;
+}
+
+#glossary_page #glossary .header_2 {
+    font: 500 28px/35px var(--primeryfont);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#glossary_page #glossary .subheader {
+    font: 600 30px/40px var(--primeryfont);
+    margin-bottom: 15px;
+}
+
+/* =========== Glossary page Css end ==================*/
+/* =========== terms page Css start ==================*/
+
+#terms_page #terms {
+    margin-top: 150px;
+    padding-bottom: 100px;
+}
+
+#terms_page #terms .header {
+    font-family: 'quentin';
+    font-size: 50px;
+}
+
+#terms_page #terms .header_2 {
+    font: 500 28px/35px var(--primeryfont);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#terms_page #terms .subheader {
+    font: 600 30px/40px var(--primeryfont);
+    margin-bottom: 15px;
+}
+
+/* =========== terms page Css end ==================*/
+/* =========== login page Css start ==================*/
+
+#login {
+    margin-top: 150px;
+}
+
+#login .header {
+    font-family: 'quentin';
+    font-size: 50px;
+    text-align: center;
+}
+
+#login input, #login textarea {
+    border-radius: 0;
+    border: 1px solid var(--midgray);
+    padding: 10px 15px;
+    font: 400 16px/16px var(--primeryfont);
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+
+#login .submit button {
+    background: var(--orange);
+    color: var(--color1);
+    font: 600 16px/16px var(--primeryfont);
+    padding-top: 13px;
+    padding-bottom: 13px;
+    border: none;
+}
+
+#login .submit button:hover {
+    background: var(--aquamarine);
+}
+
+#login .pass_change_btn {
+    background: none;
+    border: none;
+    font-weight: 700;
+    color: var(--aquamarine);
+}
+
+#login .subheader {
+    font: 600 22px/22px var(--primeryfont);
+}
+
+#login .modal-content {
+    border-radius: 0;
+    border: 1px solid var(--orange);
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+
+#login .btn-close {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+#login .field_err {
+    color: rgb(255, 47, 47);
+    font: 500 14px/18px var(--primeryfont);
+    margin-top: 5px;
+}
+
+.password-condition-success {
+    font: 500 20px/25px var(--primeryfont);
+    background: var(--aquamarine);
+    color: var(--color1);
+    padding: 5px 20px;
+}
+
+.password-condition-error {
+    font: 500 20px/25px var(--primeryfont);
+    background: rgb(255, 50, 50);
+    color: var(--color1);
+    padding: 5px 20px;
+}
+
+.blog_content_text * {
+    font-family: var(--primeryfont) !important;
+  	background: white !important;
+}
+
+.blog_content_text span, .blog_content_text p {
+  font-size: 16px !important;
+
+}
+
+.call_btn a {
+    background: var(--orange) !important;
+    color: white;
+    font: 600 18px/22px var(--primeryfont);
+    text-align: center;
+    padding: 8px 20px;
+    border: none;
+    letter-spacing: 1px;
+    border-radius: 0;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+
+.call_btn {
+    text-align: center;
+}
+
+.call_btn a:hover {
+    background: var(--aquamarine) !important;
+}
+
+.call_btn p {
+    font-family: var(--primeryfont);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    color: var(--aquamarine);
+}
+
+#article_page .call_btn {
+    text-align: left !important;
+}
+
+
+/* =========== login page Css end ==================*/
+
